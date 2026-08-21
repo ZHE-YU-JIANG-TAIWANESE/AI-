@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="900" viewBox="0 0 300 900">
+  <rect width="300" height="900" fill="white"/>
+  <g fill="#d9d9d9" stroke="#222" stroke-width="4">
+    <ellipse cx="152" cy="92" rx="48" ry="68"/>
+    <path d="M141 154 L164 154 L171 196 L140 196 Z"/>
+    <path d="M143 187 C122 215 118 260 125 310 C132 360 149 405 146 458 L191 458 C190 409 208 368 210 315 C212 260 195 213 169 188 Z"/>
+    <path d="M148 451 C128 494 131 544 143 590 L180 590 C190 548 188 500 176 461 Z"/>
+    <path d="M144 584 C132 657 138 738 149 817 L177 817 L178 590 Z"/>
+    <path d="M149 814 L179 814 L193 850 L143 850 Z"/>
+    <path d="M136 218 C112 289 105 377 110 488 L133 489 C133 392 141 309 157 244 Z"/>
+    <ellipse cx="122" cy="505" rx="14" ry="29"/>
+  </g>
+  <line x1="155" y1="20" x2="155" y2="870" stroke="#999" stroke-dasharray="8 8"/>
+  <text x="16" y="30" font-family="sans-serif" font-size="18">OCW synthetic SIDE reference</text>
+</svg>
