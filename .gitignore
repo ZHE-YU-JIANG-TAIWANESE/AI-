@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ocw/
+.forge/
+dist/
+build/
+*.blend1
+*.blend2
+.DS_Store
+.env
+.env.*
+!/.env.example
