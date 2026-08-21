@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-character-workbench"
+version = "0.1.0"
+description = "Vendor-neutral workbench for reproducible AI-assisted Blender character modeling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "Open Character Workbench contributors"}]
+dependencies = []
+
+[project.scripts]
+ocw = "open_character_workbench.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
