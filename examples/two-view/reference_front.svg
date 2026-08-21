@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="900" viewBox="0 0 360 900">
+  <rect width="360" height="900" fill="white"/>
+  <g fill="#d9d9d9" stroke="#222" stroke-width="4">
+    <ellipse cx="180" cy="92" rx="55" ry="68"/>
+    <path d="M165 154 L195 154 L202 195 L158 195 Z"/>
+    <path d="M158 188 C125 202 112 248 118 305 C124 360 142 405 146 458 L214 458 C218 405 236 360 242 305 C248 248 235 202 202 188 Z"/>
+    <path d="M145 452 C128 490 126 545 140 590 L170 590 L180 470 Z"/>
+    <path d="M215 452 C232 490 234 545 220 590 L190 590 L180 470 Z"/>
+    <path d="M140 584 C130 650 132 735 144 817 L174 817 L171 590 Z"/>
+    <path d="M220 584 C230 650 228 735 216 817 L186 817 L189 590 Z"/>
+    <path d="M144 814 L174 814 L180 854 L133 854 Z"/>
+    <path d="M216 814 L186 814 L180 854 L227 854 Z"/>
+    <path d="M122 218 C90 280 76 367 70 488 L94 491 C107 384 122 303 145 244 Z"/>
+    <path d="M238 218 C270 280 284 367 290 488 L266 491 C253 384 238 303 215 244 Z"/>
+    <ellipse cx="82" cy="505" rx="15" ry="30"/>
+    <ellipse cx="278" cy="505" rx="15" ry="30"/>
+  </g>
+  <line x1="180" y1="20" x2="180" y2="870" stroke="#999" stroke-dasharray="8 8"/>
+  <text x="16" y="30" font-family="sans-serif" font-size="18">OCW synthetic FRONT reference</text>
+</svg>
