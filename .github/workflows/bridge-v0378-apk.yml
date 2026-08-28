@@ -23,7 +23,9 @@ jobs:
           set -euo pipefail
           curl -L --fail --retry 4 --max-time 300 \
             -o disorderstairs-googleauth-v0378-debug.apk \
-            "https://tmpfiles.org/dl/wcw4BpabfytN/disorderstairs-googleauth-v0378-debug.apk"
+            "https://tmpfiles.org/dl/w1w6B2aKUbbN/disorderstairs-googleauth-v0378-debug.apk"
+          wc -c disorderstairs-googleauth-v0378-debug.apk
+          file disorderstairs-googleauth-v0378-debug.apk
           echo "d84f4d20fab98c575d05096b4b721c52a8d0c00899a45ba2caf03a33e1ec9a5c  disorderstairs-googleauth-v0378-debug.apk" | sha256sum -c -
           ls -lh disorderstairs-googleauth-v0378-debug.apk
 
