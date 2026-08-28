@@ -21,12 +21,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          PAGE_URL="https://tmpfiles.org/w1w6B2aKUbbN/disorderstairs-googleauth-v0378-debug.apk"
+          curl -L --fail --retry 4 --max-time 60 -o /tmp/page.html "$PAGE_URL"
+          RAW_URL="$(python3 - <<'PY'
+import re
+s=open('/tmp/page.html','r',encoding='utf-8').read()
+m=re.search(r'class="download" href="([^"]+)"', s)
+if not m:
+    raise SystemExit("download href not found")
+print(m.group(1))
+PY
+)"
+          echo "Resolved signed raw URL"
           curl -L --fail --retry 4 --max-time 300 \
             -o disorderstairs-googleauth-v0378-debug.apk \
-            "https://tmpfiles.org/dl/w1w6B2aKUbbN/disorderstairs-googleauth-v0378-debug.apk"
+            "$RAW_URL"
           wc -c disorderstairs-googleauth-v0378-debug.apk
           file disorderstairs-googleauth-v0378-debug.apk
-          sed -n '1,120p' disorderstairs-googleauth-v0378-debug.apk
           echo "d84f4d20fab98c575d05096b4b721c52a8d0c00899a45ba2caf03a33e1ec9a5c  disorderstairs-googleauth-v0378-debug.apk" | sha256sum -c -
           ls -lh disorderstairs-googleauth-v0378-debug.apk
 
