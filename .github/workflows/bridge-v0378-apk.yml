@@ -1,0 +1,36 @@
+name: Bridge Verified v0.3.78 APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bridge-v0378-apk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bridge:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Download verified APK from temporary host
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 4 --max-time 300 \
+            -o disorderstairs-googleauth-v0378-debug.apk \
+            "https://tmpfiles.org/dl/wcw4BpabfytN/disorderstairs-googleauth-v0378-debug.apk"
+          echo "d84f4d20fab98c575d05096b4b721c52a8d0c00899a45ba2caf03a33e1ec9a5c  disorderstairs-googleauth-v0378-debug.apk" | sha256sum -c -
+          ls -lh disorderstairs-googleauth-v0378-debug.apk
+
+      - name: Upload one-day artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: v0378-verified-apk
+          path: disorderstairs-googleauth-v0378-debug.apk
+          retention-days: 1
+          compression-level: 0
