@@ -26,6 +26,7 @@ jobs:
             "https://tmpfiles.org/dl/w1w6B2aKUbbN/disorderstairs-googleauth-v0378-debug.apk"
           wc -c disorderstairs-googleauth-v0378-debug.apk
           file disorderstairs-googleauth-v0378-debug.apk
+          sed -n '1,120p' disorderstairs-googleauth-v0378-debug.apk
           echo "d84f4d20fab98c575d05096b4b721c52a8d0c00899a45ba2caf03a33e1ec9a5c  disorderstairs-googleauth-v0378-debug.apk" | sha256sum -c -
           ls -lh disorderstairs-googleauth-v0378-debug.apk
 
